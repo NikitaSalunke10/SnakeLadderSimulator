@@ -1,2 +1,3 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+﻿Console.WriteLine("Welcome in Snake & Ladder Simulator.");
+int position = 0;
+Console.WriteLine("Player 1 position is " + position);
