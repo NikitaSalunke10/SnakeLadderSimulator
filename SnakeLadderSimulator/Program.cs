@@ -2,8 +2,8 @@
 const int SNAKE = 2;
 const int WINNING_POINT = 100;
 Console.WriteLine("Welcome in Snake & Ladder Simulator.");
-int tempPosition, diceCount=0;
-for (int position = 0; position <= WINNING_POINT; position++)
+int tempPosition, diceCount=0, position = 0;
+while (position < WINNING_POINT)
 {
     Random random = new Random();
     int option = random.Next(0, 3);
