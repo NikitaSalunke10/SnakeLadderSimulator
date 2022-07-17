@@ -1,6 +1,21 @@
-﻿Console.WriteLine("Welcome in Snake & Ladder Simulator.");
+﻿const int LADDER = 1;
+const int SNAKE = 2;
+Console.WriteLine("Welcome in Snake & Ladder Simulator.");
 int position = 0;
 Random random = new Random();
-int rolldie = random.Next(1, 7);
+int option = random.Next(0,3);
+int rolldie = random.Next(1,7);
 Console.WriteLine("Player 1 position is " + position);
-Console.WriteLine("Roll Die value: "+rolldie);
+switch(option)
+{
+    case LADDER:
+        position += rolldie;
+        break;
+    case SNAKE:
+        position -= rolldie;
+        break;
+    default:
+        position += 0;
+        break;
+}    
+Console.WriteLine("Player 1 position is " +position);
