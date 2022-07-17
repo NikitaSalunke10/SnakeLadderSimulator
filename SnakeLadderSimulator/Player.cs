@@ -32,6 +32,7 @@ namespace SnakeLadderSimulator
                         else
                         {
                             tempPosition += againRollDie;
+                            diceCount++;
                             if (tempPosition > 100)
                             {
                                 position += 0;
