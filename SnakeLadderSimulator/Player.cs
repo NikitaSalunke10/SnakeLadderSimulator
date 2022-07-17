@@ -13,7 +13,6 @@ namespace SnakeLadderSimulator
         const int WINNING_POINT = 100;
         public void gamePlay()
         {
-            Console.WriteLine("Welcome in Snake & Ladder Simulator.");
             int tempPosition, diceCount = 0, position = 0;
             while (position < WINNING_POINT)
             {
