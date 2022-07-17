@@ -1,42 +1,17 @@
-﻿const int LADDER = 1;
-const int SNAKE = 2;
-const int WINNING_POINT = 100;
+﻿using SnakeLadderSimulator;
+Player play = new Player();
 Console.WriteLine("Welcome in Snake & Ladder Simulator.");
-int tempPosition, diceCount=0;
-for (int position = 0; position <= WINNING_POINT; position++)
+int player1 = play.gamePlay(1);
+int player2 = play.gamePlay(2);
+if(player1 < player2)
 {
-    Random random = new Random();
-    int option = random.Next(0, 3);
-    int rolldie = random.Next(1, 7);
-    diceCount++;
-    switch (option)
-    {
-        case LADDER:
-            tempPosition = position + rolldie;
-            if(tempPosition > 100)
-            {
-                position += 0;
-            }
-            else
-            {
-                position = tempPosition;
-            }
-            break;
-        case SNAKE:
-            tempPosition = position - rolldie;
-            if (tempPosition <= 0)
-            {
-                position = 0;
-            }
-            else
-            {
-                position = tempPosition;
-            }
-            break;
-        default:
-            position += 0;
-            break;
-    }
-    Console.WriteLine("Player 1 position is " + position);
+    Console.WriteLine("Player 1 is a Winner.");
 }
-Console.WriteLine("The " +diceCount+ " times the dice was played to win the game.");
+else if(player1 > player2)
+{
+    Console.WriteLine("Player 2 is a Winner.");
+}
+else
+{
+    Console.WriteLine("Its a tie between Player 1 and 2.");
+}
